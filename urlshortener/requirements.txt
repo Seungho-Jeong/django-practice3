@@ -4,6 +4,7 @@ black~=21.4b2
 click~=7.1.2
 django~=3.2
 django-debug-toolbar~=3.2
+django-extentions
 django-ninja~=0.13
 django-seed~=0.2
 djangorestframework~=3.12

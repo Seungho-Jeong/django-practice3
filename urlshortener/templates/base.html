@@ -7,11 +7,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>URL Shortener</title>
 </head>
-<body>
-{{ user }} <br/>
-{% for i in params %}
-    {{ i }} <br/>
-{% endfor %}
-<a href="{% url 'register' %}">회원가입</a>
-</body>
+    <body>
+    {{ user }} <br/>
+
+    {% for i in params %}{{ i }}<br/>{% endfor %}
+
+    {% if user.is_authenticated %}
+        <p><a href="{% url 'logout' %}">Logout</a></p>
+    {% else %}
+        <p><a href="{% url 'register' %}">Sign Up</a></p>
+        <p><a href="{% url 'login' %}">Login</a></p>
+    {% endif %}
+    </body>
 </html>

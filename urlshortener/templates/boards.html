@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load custom_tags %}
 {% block content %}
 
     <h2>User list</h2>
@@ -15,7 +16,7 @@
         {% for user in users %}
         <tr class={% cycle "table-dark" "" %}>
             <td>{{ user.username }}</td>
-            <td>{{ user.email }}</td>
+            <td>{{ user.email | email_mask }}</td>
             <td>{{ user.date_joined }}</td>
             <td>{{ user.pay_plan.name }}</td>
             <td>{{ user.pay_plan.price }}</td>
@@ -54,5 +55,6 @@
     <p>
         <a href="{% url 'index' %}">홈으로</a>
     </p>
+    {% test_tags %}
 
 {% endblock %}

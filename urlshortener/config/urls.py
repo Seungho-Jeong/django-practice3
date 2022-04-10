@@ -17,7 +17,8 @@ from django.conf import settings
 from django.contrib import admin
 from django.urls import path, include
 
-from shortener.views import index, get_user, register, login_view, logout_view, list_view
+from accounts.views import register, login_view, logout_view
+from shortener.views import index, get_user, list_view
 
 urlpatterns = [
     path('', index, name='index'),

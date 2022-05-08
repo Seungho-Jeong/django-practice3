@@ -47,7 +47,7 @@ INSTALLED_APPS = [
     'django_seed',
     # Local Apps
     'shortener',
-    'accounts',
+    'accountapp',
 ]
 
 MIDDLEWARE = [
@@ -117,7 +117,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-AUTH_USER_MODEL = 'accounts.User'
+AUTH_USER_MODEL = 'accountapp.User'
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
